@@ -1,0 +1,274 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+text-decoration: none;
+transition: all .5s;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+h1,h2,h3{
+  font-family: 'Oswald', sans-serif; 
+}
+img{
+  max-width: 100%;
+
+}
+/* Header */
+header{
+  background-color: #2E323F;
+  font-family: 'Oswald', sans-serif; 
+  font-size: 1.125rem;
+ 
+}
+p{
+  line-height: 1.3em;
+}
+.container{
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ margin: 0 auto;
+}
+
+nav{
+  
+  height: 75px;
+}
+
+.nav-menu{
+  position: fixed;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  top:75px;
+  left: 0;
+  background-color:#2E323F;
+ 
+  text-align: center;
+}
+.nav-menu li{
+  line-height: 30px;
+  margin: 25px 0;
+  transition :all .5s;
+
+}
+.nav-menu li a{
+  color: #fff;
+text-transform: uppercase;
+border-radius:15px;
+padding: .3em 1em;
+}
+.nav-menu li a.active, .nav-menu li a:hover{
+color:#fefefe;
+transition: 0.5s;
+background-color:#A59678;
+
+}
+
+.hamburger{
+  display: block;
+  cursor: pointer;
+}
+.hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: #fefefe;
+  margin: 6px 0;
+}
+
+.check{
+  height: 70vh;
+}
+
+/* Section-1 */
+
+.section-one{
+  background-color: #3B4050;
+  padding: 4em 0;
+  color: #fff;
+  
+}
+.section-one .container{
+flex-direction: column;
+}
+
+.section-one__heading{
+  
+  font-size: 3rem;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+  
+}
+
+.section-one span,h2,h3{
+  color:#A59678
+}
+.section-one__button{
+  background-color:#A59678;
+  padding: .3em 2.8em;
+  color:#fff;
+  border-radius:20px;
+  font-family: 'Oswald', sans-serif; 
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 2em;
+  font-size: 1rem;
+}
+
+/* Section-2 */
+.section-two{
+  background-color: rgb(233, 227, 227);
+  padding: 3.5em 0;
+}
+.section-two .container{
+  flex-direction: column;
+  text-align: center;
+}
+.section-two__col, .section-two__col h2, .section-three__col1 h2 {
+  margin-bottom: 1em;
+}
+
+/* Section 3 */
+.section-three{
+  flex-direction: column;
+padding: 4em 0;
+}
+.section-three__col1 img, .section-three__paragraph{
+  margin-bottom: 3em
+}
+.section-three__col2 .col{
+  background-color:#3B4050;
+  margin-bottom: 1em;
+  color:#fff;
+  text-align: center;
+  padding: 2em;
+}
+.section-three__col2 .col h2{
+  color:#fff;
+  margin-bottom: 1em;
+}
+/* Footer */
+footer{
+  padding: 3.5em 0;
+  background-color:#3B4050;
+  color:#fff;
+  text-align: center;
+
+}
+footer h1{
+  margin-bottom: 1.5em;
+}
+footer h3{
+  margin-bottom: 1.2em;
+  font-size: 1.3em;
+}
+footer .container{
+  flex-direction: column;
+}
+.footer_body .col{
+  margin-bottom: 1em;
+}
+footer ul li{
+  margin-bottom: .8em;
+}
+
+
+
+@media screen and (min-width: 700px){
+  /* Header */
+  .hamburger{
+    display: none;
+  }
+  .nav-menu{
+    position: relative;
+    height: 75px;
+    top: 0;
+  text-align: right;
+  display: flex;
+justify-content: flex-end;
+  }
+ 
+  .nav-menu li a{
+    margin-left: 10px;
+  }
+  /* Section-1 */
+  .section-one .container{
+  flex-direction: row;
+align-items: flex-end;
+    }
+   
+    .section-one__heading{
+      font-size: 5rem;
+      margin-bottom: 0;
+      width: 45%;
+    }
+    .section-one__body{
+      width: 45%;
+    }
+    .section-one__button{
+      font-size: 1.2rem;
+    }
+
+    /* Section-2 */
+    .section-two .container{
+      flex-direction: row;
+    }
+    .section-two__col{
+      width: 25%;
+    }
+  
+/* Footer */
+footer .footer_body{
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_body .col{
+  width: 20%;
+  
+  text-align: left;
+}
+footer h1{
+  font-size: 2.5rem;
+}
+}
+
+@media screen and (min-width: 700px )  and (max-width:1000px){
+  .section-three img{
+    height: 300px;
+    width: 100%;
+  }
+ 
+  .section-three__col2{
+    display: flex;
+justify-content: space-between;
+  }
+  .section-three__col2 .col{
+width: 30%;
+  }
+
+}
+@media screen and (min-width: 1000px) {
+  .section-three{
+    flex-direction: row;
+    align-items: flex-start;
+    
+  }
+  .section-three__col1{
+    width: 60%;
+  }
+  .section-three__col2{
+    width: 30%;
+  }
+  .section-three__col1 h2{
+    font-size: 2rem;
+
+  }
+}
